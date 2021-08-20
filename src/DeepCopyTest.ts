@@ -78,5 +78,11 @@ describe("DeepCopy", function() {
 
     });
 
+    it("deep copy of primitives", function() {
+
+        assert.equal(DeepCopy.deepCopy(5), 5);
+        assert.equal(DeepCopy.deepCopy("hello"), "hello");
+
+    });
 
 })
