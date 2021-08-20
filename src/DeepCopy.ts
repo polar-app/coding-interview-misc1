@@ -13,8 +13,25 @@ export namespace DeepCopy {
      *
      * This needs to be fully recursive including dictionaries contain other dictionaries
      * and arrays.
+     *
+     * HINTS
+     *
+     * - To test if a variable is an object:
+     *
+     * typeof val === 'object'
+     *
+     * - To test if a variable is an array:
+     *
+     * Array.isArray(object)
+     *
+     * - To get all the keys of an object you can call Object.keys(dict)
+     *
+     * - If you are given an array as input it should return an array as output.
+     *
+     * - If you are given an object as input it should return an object as output.
+     *
      */
-    export function deepCopy<T extends any>(dict: T): T {
+    export function deepCopy<T extends any>(source: T): T {
 
         // TODO: implement this function from the above function definition.
         return {} as T;

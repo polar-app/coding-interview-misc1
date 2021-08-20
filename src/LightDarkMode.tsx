@@ -19,8 +19,6 @@ export const Main = () => {
 
 }
 
-
-
 export const Settings = () => {
 
     const toggleMode = React.useCallback(() => {
