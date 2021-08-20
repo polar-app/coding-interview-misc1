@@ -33,8 +33,6 @@ describe("DeepCopy", function() {
 
     });
 
-
-
     it("inner integrity", function() {
 
         const dict: any = {
@@ -56,5 +54,29 @@ describe("DeepCopy", function() {
         });
 
     });
+
+
+    it("inner integrity with array", function() {
+
+        const dict: any = {
+            "hello": "world",
+            "inner": [
+                'bar'
+            ]
+        };
+
+        const copy = DeepCopy.deepCopy(dict);
+
+        dict['inner'][0] = 'cat';
+
+        assert.deepEqual(copy, {
+            "hello": "world",
+            "inner": [
+                'bar'
+            ]
+        });
+
+    });
+
 
 })
