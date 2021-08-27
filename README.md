@@ -7,9 +7,6 @@ locally.  This way you can give us the URL and we can review internally.
 
 You'll need to run ```npm test``` and then implement each algorithm one at a tim.
 
-When you're done the interview please commit and push back to your repository so
-that we can review internally.
-
 # setup
 
 ```npm install``` to install all dependencies
@@ -23,3 +20,10 @@ that we can review internally.
 - TextMergeJoin.ts
 - UseLocalStorage.ts
 - LightDarkMode.tsx
+
+# At End of Interview
+
+- Run ```git commit``` and push to your repository in github
+- Give your interviewer the URL to your github repo 
+- ... and the output of ```git log -1```.
+
