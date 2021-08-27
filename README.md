@@ -7,6 +7,9 @@ locally.  This way you can give us the URL and we can review internally.
 
 You'll need to run ```npm test``` and then implement each algorithm one at a tim.
 
+When you're done the interview please commit and push back to your repository so
+that we can review internally.
+
 # setup
 
 ```npm install``` to install all dependencies
