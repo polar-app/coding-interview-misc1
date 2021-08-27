@@ -23,7 +23,7 @@ You'll need to run ```npm test``` and then implement each algorithm one at a tim
 
 # At End of Interview
 
-- Run ```git commit``` and push to your repository in github
+- Run ```git commit -m 'Finished interview' && git push``` to push to your repository in github
 - Give your interviewer the URL to your github repo 
 - ... and the output of ```git log -1```.
 
