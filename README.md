@@ -5,7 +5,7 @@ This is a basic repository of code that isn't implemented.
 Please fork this repo to your own github account, then ```git clone``` it
 locally.  This way you can give us the URL and we can review internally.
 
-You'll need to run ```npm test``` and then implement each algorithm one at a tim.
+You'll need to run ```npm test``` and then implement each algorithm one at a time.
 
 # setup
 
