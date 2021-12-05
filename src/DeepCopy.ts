@@ -45,7 +45,6 @@ export namespace DeepCopy {
 
         if (typeof source === 'object' && Array.isArray(source) && source !== null) {
             const deep: Array<any> = source as Array<any>
-            
         }
         return copy as T;
     }
