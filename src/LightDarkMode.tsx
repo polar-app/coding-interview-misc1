@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocalStorageState } from './UseLocalStorage';
 
 export const App = () => {
 
@@ -21,8 +22,9 @@ export const Main = () => {
 
 export const Settings = () => {
 
+    const [mode, setMode] = useLocalStorageState();
     const toggleMode = React.useCallback(() => {
-
+        setMode('')
     }, []);
 
     return (

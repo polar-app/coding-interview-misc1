@@ -14,8 +14,8 @@
 export class RingBuffer<T> {
 
     constructor(capacity: number) {
-        if (capacity > 0) {
-            console.log(capacity)
+        if (capacity < 0) {
+            return;
         }
     }
 
