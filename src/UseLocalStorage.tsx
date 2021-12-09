@@ -31,7 +31,33 @@ export function useLocalStorageState<V>(key: string, initialValue: V): [V, (newV
 
     // TODO: implement this code - this just returns 'any' which would not be usable.
 
-    return [] as any;
+  const [storedValue, setStoredValue] = React.useState<V>(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+        
+      console.log(error);
+      return initialValue;
+    }
+  });
+
+  const setValue = (value: V) => {
+    try {
+        
+      const valueToStore =
+        value instanceof Function ? value(storedValue) : value;
+        
+      setStoredValue(valueToStore);
+      
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) {
+        
+      console.log(error);
+    }
+  };
+  return [storedValue, setValue];
 
 }
 
