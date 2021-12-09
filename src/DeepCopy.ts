@@ -35,18 +35,26 @@ export namespace DeepCopy {
 
         // TODO: implement this function from the above function definition.
 
-        const copy: any = {} as T;
+        let copy: any = {} as T;
         if (typeof source === 'object' && source !== null && !Array.isArray(source)) {
             const deep: any = source as object
             Object.keys(deep).forEach((key: any) => {
-                copy[key] = deep[key]
+                if (typeof deep[key] === 'object') {
+                    return copy[key] = deepCopy(deep[key]);
+                }
+                return copy[key] = deep[key]
             })
         }
 
         if (typeof source === 'object' && Array.isArray(source) && source !== null) {
-            const deep: Array<any> = source as Array<any>
+            const deep: Array<any> = source as Array<any>;
+            return copy = [...deep] as T
         }
-        return copy as T;
+        if (typeof source === 'number' || typeof source === 'string') {
+
+            return copy = source
+        }
+        return copy;
     }
 
 }
