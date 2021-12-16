@@ -1,3 +1,6 @@
 src/*.js
 src/*.d.ts
 package-lock.json
+node_modules
+.idea
+
