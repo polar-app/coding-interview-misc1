@@ -27,11 +27,19 @@ import React from 'react';
  * @param key The key should be the key used by localStorage
  * @param initialValue The initial value to store for the first value.
  */
-export function useLocalStorageState<V>(key: string, initialValue: V): [V, (newValue: V) => void] {
 
-    // TODO: implement this code - this just returns 'any' which would not be usable.
+type SetLocalStorage<V> = (newValue: V) => void;
+type UseLocalStorageStateTuple<V> = readonly [V, SetLocalStorage<V>];
 
-    return [] as any;
+export function useLocalStorageState<V extends string>(key: string, initialValue: V): UseLocalStorageStateTuple<V> {
+
+    // TODO: implement this code
+
+    const setter = React.useCallback((newValue: V) => {
+        // noop
+    }, [])
+
+    return [initialValue, setter];
 
 }
 
