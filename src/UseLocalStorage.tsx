@@ -42,17 +42,3 @@ export function useLocalStorageState<V extends string>(key: string, initialValue
     return [initialValue, setter];
 
 }
-
-export const RememberPassword = () => {
-
-    // TODO: change this to use useLocalStorageState
-    const [value, setValue] = React.useState('off');
-    // const [value, setValue] = useLocalStorageState('remember-password', 'off');
-
-    return (
-        <input type="checkbox"
-               value={value}
-               onChange={event => setValue(event.currentTarget.value)}/>
-    );
-
-}

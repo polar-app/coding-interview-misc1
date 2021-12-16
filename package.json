@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run-script compile && npm run-script mocha",
-    "mocha": "mocha --timeout 20000 --exit 'src/**/*Test.js'",
+    "mocha": "mocha --require global-jsdom/register --timeout 20000 --exit 'src/**/*Test.js'",
     "compile": "tsc"
   },
   "repository": {
@@ -30,6 +30,9 @@
     "@types/react": "=16.9.53",
     "@types/react-dom": "=16.9.8",
     "react": "=16.14.0",
-    "react-dom": "=16.14.0"
+    "react-dom": "=16.14.0",
+    "@testing-library/react": "=12.1.2",
+    "jsdom": "=19.0.0",
+    "global-jsdom": "=8.4.0"
   }
 }

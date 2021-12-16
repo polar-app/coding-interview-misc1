@@ -11,7 +11,7 @@
  *
  * The ordering of the push operations must be kept.
  */
-class RingBuffer<T> {
+export class RingBuffer<T> {
 
     constructor(capacity: number) {
     }
